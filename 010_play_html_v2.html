@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 110 Fall 2026</title>
+
+    <style>
+        body{
+            /* background-color: rgb(162, 242, 248); */
+
+            /* background-image: linear-gradient(to bottom, #c0f0ff, #d3fdd5); */
+
+            background-color: #3498db;
+            animation: colorChange 10s infinite alternate;
+        }
+        @keyframes colorChange {
+            0% {
+                background-color: rgb(200, 232, 236); 
+            }
+            50% {
+                background-color: #ffffff;
+            }
+            100% {
+                background-color: rgb(200, 232, 236);
+            }
+        }
+
+        table{
+            border-collapse:collapse; 
+            width: 80%;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            background-color: rgb(249, 247, 125);
+        }
+    </style>
+</head>
+
+<body>    
+    <h1 align="center">HTML</h1>
+
+    <hr>
+    <p>Our first exam will be released on Thursday. It requires you to create your own free web page. You submit the link. It's due in 2 weeks.</p>
+    <hr>
+
+    <h2>Form</h2>
+    <div>
+        <p>Used for users to input or select information.</p>
+        <p>For example</p>
+        <ul>
+            <li>Register an account</li>
+            <li>Log into the website</li>
+            <li>Enter name ane password</li>
+            <li>Participate in a survey</li>
+            <li>Submit contact info</li>
+        </ul>
+
+        <hr>
+        <b>Note: "hr" &rarr; horizontal rule, to create a break or visual divider. </b>
+        <hr>
+
+        <p><b>There are some useful tags:</b></p>
+        <ol>
+            <li>form - create the entire form</li>
+            <li>label - to tell the users what to input</li>
+            <li>input - to input</li>
+            <li>textarea - multi-line input</li>
+            <li>select - drop down menu, to let the users to select form options</li>
+            <li>button - submit or trigger an action</li>
+        </ol>
+    </div>
+
+    <div style="border: 3px dashed rgb(0, 255, 55);">
+        <h3>Example: from + label + input</h3>
+        <form action="http://www.google.com">
+            <label for="name">Your name:</label>
+            <input type="text" id="name">
+            <button>Go</button>
+        </form>
+
+        <h3>Example: from + label + input (password)</h3>
+        <form action="http://www.google.com">
+            <label for="password">Your password:</label>
+            <input type="password" id="password">
+            <button>Go</button>
+        </form>
+
+        <h3>Example: from + label + input (email)</h3>
+        <form action="http://www.google.com">
+            <label for="email">Your email:</label>
+            <input type="email" id="email" placeholder="xxx@hartford.edu">
+            <button>Go</button>
+        </form>
+
+        <h3>Example: drop down selections</h3>
+        <form action="">
+            <label for="course">Select a course to enroll</label>
+            <select name="" id="course">
+                <option value="">CS110</option>
+                <option value="">CS114</option>
+                <option value="">CS115</option>
+                <option selected value="">CS220P</option>
+            </select>
+        </form>
+    </div>
+
+
+    <hr style="width: 100%; border: none; border-top: 3px dashed red;">
+
+    <h2>Table</h2>
+    <div style="border: 3px dashed red;">
+        <p>There are four useful tags:</p>
+
+        <ul>
+            <li style="list-style-type: circle;"><mark>table</mark> - to create the table</li>
+            <li style="list-style-type: square;"><mark>th</mark> - table head</li>
+            <li style="list-style-type: lower-roman;"><mark>tr</mark> - table row</li>
+            <li style="list-style-type: '❤️❤️';"><mark>td</mark> - table data</li>
+        </ul>
+
+        <table>
+            <caption>Example table</caption>
+            <tr>
+            <th>Names</th> <th>Course</th> <th>Grades</th>
+            </tr>
+
+            <tr>
+                <td rowspan="2">Tom</td>  <td>CS110</td> <td rowspan="2">98</td>
+            </tr>
+
+            <tr>
+                   <td>CS115</td>  
+            </tr>
+
+            <tr>
+                <td>Popeye</td> <td>CS110</td> <td>90</td>
+            </tr>
+
+
+        </table>
+    </div>
+
+
+
+
+
+
+    <h2> div tag </h2>
+
+    <div style="color: rgb(4, 246, 4);">
+    A simple way to create 6 titles: <strong>h&*6</strong>, <b>b is a shortcut for "strong"</b>.
+
+    <p style="color:rgb(149, 149, 238)"> <b>The tag "strong" and "b".</b> </p>
+    <p> <em>This is how "em" tag looks like.</em> </p>
+    <p> <i>This is how "i" tag looks like.</i> </p>
+    <p> <u>This is how "u" tag looks like.</u> </p>
+    <p> <del>Sometimes, we want <span style="color: rgb(255, 0, 0)">delete</span> sth., but we want to left them there in the file. </del> </p>
+    <p> <mark>This is my favorite.</mark> Let's see how "br" works: <br>use it to make a new line. </p>
+    </div>
+
+    <h2> Unordered List </h2>
+    <ul>Tags for highlighting (We need "li" tag) 
+        <li> <b> To make things bold </b> 
+            <ol>
+                <li>"strong"
+                    <ol>
+                        <li>s</li>
+                        <li>t</li>
+                        <li>r</li>
+                        <li>o</li>
+                        <li>n</li>
+                        <li>g</li>
+                    </ol>
+
+                </li>
+                <li>"b"</li>
+            </ol>
+        
+        </li>
+        <li> <i>"em" or "i"</i> </li>
+        <li> <u>"u"</u> </li>
+        <li> <del>"del"</del> </li>
+        <li> <mark>"mark"</mark> </li>
+    </ul>
+
+    <h2> Ordered List </h2>
+    <ol> Tags for highlighting (We need "li" tag)
+        <li>A
+            <ul>Ranges
+                <li> 100 </li>
+                <li> 99 </li>
+                <li> 98 </li>
+                <li> ... </li>
+                <li> 92 </li>
+                <li> 91 </li>
+            </ul>
+        </li>
+        <li>B</li>
+        <li>C</li>
+        <li>...</li>
+        <li>F</li>
+        <!-- <li>W</li> -->
+    </ol>
+
+    <h2>h-tags</h2>
+    <p>It's best to have just only one h1 tag in one page.</p> 
+    
+    <p>h2 tag is used for major section within the page</p>
+
+    <p>The other h-tags are generally used for sub-sections within those major sections to further break down the content.</p>
+
+    <h2 align="center">p-tag</h2>
+    <p>p: paragraph</p>
+
+    <h2 align="center">img tag</h2>
+    <p>This is for inserting an image. For this tag, it's just one tag, there is not an end tag.</p>
+    <img src="https://i.etsystatic.com/42415510/r/il/d1e861/5761455247/il_fullxfull.5761455247_13un.jpg" alt="spider man" title="A different name" width=30% border="3px">
+    
+    <h2 align="center">a-tag</h2>
+    <p>a: anchor</p>
+    <p>href: hypertext reference</p>
+    <p>target: Open within a new window</p>
+    <a href="http://www.google.com" target="_blank" title="to Google">Search.</a>
+
+    
+
+</body>
+</html>
